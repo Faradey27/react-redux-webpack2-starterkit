@@ -1,0 +1,23 @@
+@import "../../uiTheme/pallete.less";
+@import "../../uiTheme/offsets.less";
+@import "../../uiTheme/sizes.less";
+
+.headerBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: @HEADER_HEIGHT;
+  padding: 0 @DEFAULT_MARGIN;
+  padding-left: 12px !important; // we require to override material-ui inline styles
+  padding-right: 12px !important; // we require to override material-ui inline styles
+  border-radius: 2px !important;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.iconClassNameLeft {
+  margin: 0;
+}

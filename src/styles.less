@@ -1,0 +1,31 @@
+@import "./uiTheme/offsets.less";
+@import "./uiTheme/sizes.less";
+@import "./uiTheme/pallete.less";
+
+:global {
+  html {
+    background-color: @MAIN_BACKGROUND_COLOR;
+
+    body {
+      min-height: 100vh;
+      min-width: @MIN_SUPPORT_SIZE;
+    }
+
+    ::-webkit-scrollbar {
+      width: @SCROLL_SIZE;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: @SCROLL_THUMB_COLOR;
+      border-radius: @DEFAULT_BORDER_RADIUS;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: SCROLL_TRACK_COLOR;
+    }
+
+    ::-webkit-scrollbar:horizontal {
+      height: @SCROLL_SIZE;
+    }
+  }
+}

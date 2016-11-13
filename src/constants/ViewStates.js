@@ -1,0 +1,2 @@
+export const LOGIN_VIEW_STATE = 'LOGIN_VIEW_STATE';
+export const APPS_VIEW_STATE = 'APPS_VIEW_STATE';
