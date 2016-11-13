@@ -1,6 +1,6 @@
 {
   "name": "react-redux-webpack2-starterkit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Boilerplate for react-redux project with webpack 2 and tests",
   "main": "src/index.js",
   "keywords": [
@@ -156,9 +156,6 @@
     "react": ">=15.0.0"
   },
   "_id": "react-redux-webpack2-starterkit@0.0.1",
-  "scripts": {
-    "build": "babel src -d dist"
-  },
   "_from": "react-redux-webpack2-starterkit@*",
   "_npmVersion": "3.8.0",
   "_npmUser": {
