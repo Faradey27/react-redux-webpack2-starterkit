@@ -2,12 +2,14 @@ import { normalize } from 'normalizr';
 import Immutable from 'immutable';
 
 import { NOT_FOUND, EMPTY_VALUE } from './../constants/Constants';
-import { APPS } from './../constants/MappersTypes';
+import { APPS, USER } from './../constants/MappersTypes';
 
 import { mapApps } from './../mappers/apps';
+import { mapUser } from './../mappers/users';
 
 const hash = {
   [APPS]: (data) => mapApps(data),
+  [USER]: (data) => mapUser(data),
 };
 
 class SchemaUtils {

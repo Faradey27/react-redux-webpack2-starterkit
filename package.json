@@ -1,6 +1,6 @@
 {
   "name": "react-redux-webpack2-starterkit",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Boilerplate for react-redux project with webpack 2 and tests",
   "main": "src/index.js",
   "keywords": [
@@ -59,7 +59,7 @@
     "moment": "^2.14.1",
     "normalizr": "^2.2.1",
     "pure-render-decorator": "^1.1.1",
-    "react": "^15.3.1",
+    "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.3.2",
     "react-addons-test-utils": "^15.3.1",
     "react-codemirror": "^0.2.6",
@@ -81,7 +81,7 @@
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
-    "redux-form": "^6.0.5",
+    "redux-form": "^6.2.0",
     "redux-immutablejs": "0.0.8",
     "redux-logger": "^2.6.1",
     "redux-saga": "^0.12.0",

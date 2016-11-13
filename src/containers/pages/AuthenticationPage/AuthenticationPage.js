@@ -7,14 +7,12 @@ import { replace } from 'react-router-redux';
 
 import { getAuthenticatedUser } from './../../../selectors/users';
 import userUtils from './../../../utils/userUtils';
-import { loginUser } from './../../../actions/users';
 
 import LoginForm from './../../../components/Forms/LoginForm';
 
 @pureRender
 class AuthenticationPage extends Component {
   static propTypes = {
-    loginUser: PropTypes.func,
     replace: PropTypes.func,
     user: PropTypes.instanceOf(Immutable.Map),
   }
@@ -47,7 +45,7 @@ class AuthenticationPage extends Component {
   render() {
     return (
       <div>
-        <LoginForm submit={this.props.loginUser} />
+        <LoginForm />
       </div>
     );
   }
@@ -57,4 +55,4 @@ const mapStateToProps = (state) => ({
   user: getAuthenticatedUser(state),
 });
 
-export default connect(mapStateToProps, { loginUser, replace })(AuthenticationPage);
+export default connect(mapStateToProps, { replace })(AuthenticationPage);

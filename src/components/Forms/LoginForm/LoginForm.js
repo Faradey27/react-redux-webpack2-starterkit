@@ -10,13 +10,15 @@ import { loginValidation } from './../../../utils/forms/validation';
 import { getViewState } from './../../../selectors/view';
 import { LOGIN_VIEW_STATE } from './../../../constants/ViewStates';
 
+import { loginUser } from './../../../actions/users';
+
 import styles from './LoginForm.less';
 
 @PureRender
 class LoginForm extends Component {
   static propTypes = {
     handleSubmit: PropTypes.func, // from redux-form
-    submit: PropTypes.func,
+    loginUser: PropTypes.func,
     viewState: PropTypes.instanceOf(Immutable.Map),
   }
 
@@ -25,7 +27,7 @@ class LoginForm extends Component {
   }
 
   submit = (form) => {
-    this.props.submit({ login: form.get('login'), password: form.get('password') });
+    this.props.loginUser({ login: form.get('login'), password: form.get('password') });
   }
 
   render() {
@@ -52,7 +54,7 @@ class LoginForm extends Component {
           />
           <RaisedButton
             label="Login"
-            spinButton={this.props.viewState.get('isInProgress')}
+            spinButton={this.props.viewState && this.props.viewState.get('isInProgress')}
             type="submit"
           />
         </div>
@@ -70,4 +72,4 @@ const mapStateToProps = (state) => ({
   viewState: getViewState(state, LOGIN_VIEW_STATE),
 });
 
-export default connect(mapStateToProps)(LoginFormWrapped);
+export default connect(mapStateToProps, { loginUser })(LoginFormWrapped);
