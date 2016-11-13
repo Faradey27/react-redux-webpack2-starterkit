@@ -3,6 +3,32 @@
   "version": "0.0.1",
   "description": "Boilerplate for react-redux project with webpack 2 and tests",
   "main": "src/index.js",
+  "keywords": [
+   "react",
+   "mathjax",
+   "beautifier",
+   "formula",
+   "math",
+   "formulas"
+  ],
+  "author": {
+   "name": "Andrii Tiertyshnyi",
+   "email": "andrii.tiertyshnyi@gmail.com"
+  },
+  "contributors": [
+   {
+     "name": "Andrii Tiertyshnyi(Faradey27)",
+     "url": "https://github.com/Faradey27"
+   }
+  ],
+  "license": "MIT",
+  "repository": {
+   "type": "git",
+   "url": "https://github.com/Faradey27/react-redux-webpack2-starterkit"
+  },
+  "bugs": {
+   "url": "https://github.com/Faradey27/react-redux-webpack2-starterkit/issues"
+  },
   "scripts": {
     "start": "node server.js",
     "testserver": "npm run build && node testserver.js",
@@ -125,5 +151,18 @@
       "ga",
       "jsPlumb"
     ]
+  },
+  "peerDependencies": {
+    "react": ">=15.0.0"
+  },
+  "_id": "react-redux-webpack2-starterkit@0.0.1",
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "_from": "react-redux-webpack2-starterkit@*",
+  "_npmVersion": "3.8.0",
+  "_npmUser": {
+    "name": "faradey27",
+    "email": "andrii.tiertyshnyi@gmail.com"
   }
 }
