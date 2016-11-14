@@ -1,15 +1,15 @@
 {
   "name": "react-redux-webpack2-starterkit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Boilerplate for react-redux project with webpack 2 and tests",
   "main": "src/index.js",
   "keywords": [
    "react",
-   "mathjax",
-   "beautifier",
-   "formula",
-   "math",
-   "formulas"
+   "webpack2",
+   "redux",
+   "tests",
+   "nightwatch",
+   "i18n"
   ],
   "author": {
    "name": "Andrii Tiertyshnyi",
