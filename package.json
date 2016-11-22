@@ -1,6 +1,6 @@
 {
   "name": "react-redux-webpack2-starterkit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Boilerplate for react-redux project with webpack 2 and tests",
   "main": "src/index.js",
   "keywords": [
@@ -9,6 +9,7 @@
     "redux",
     "tests",
     "nightwatch",
+    "windows",
     "i18n"
   ],
   "author": {
@@ -32,11 +33,11 @@
   "scripts": {
     "start": "node server.js",
     "testserver": "npm run build && node testserver.js",
-    "build": "sudo rm -rf dist && NODE_ENV=production webpack -p",
+    "build": "rm -rf dist && NODE_ENV=production webpack -p",
     "test": "BABEL_ENV=test mocha --compilers js:babel-register --require ./test/testHelper.js --recursive ./test/**/*.spec.js",
     "test:unit": "BABEL_ENV=test mocha --compilers js:babel-register --require ./test/testHelper.js --recursive ./test/**/*.spec.js",
     "test:coverage": "BABEL_ENV=test nyc --require babel-core/register mocha --require ./test/testHelper.js --recursive ./test/**/*.spec.js",
-    "test:e2e": "./nightwatch --test",
+    "test:e2e": "node nightwatch --test",
     "createLocaleFiles": "./bin/extract_lang.sh",
     "convertPOtoJson": "./bin/po2json.sh"
   },

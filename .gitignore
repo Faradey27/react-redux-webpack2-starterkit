@@ -4,6 +4,7 @@ snapshots
 e2eTestLog
 npm-debug.log
 dist
+.nyc_output
 output/**
 *.class
 *.iml
