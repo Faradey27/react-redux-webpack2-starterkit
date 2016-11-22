@@ -29,11 +29,11 @@ module.exports = [
   },
   {
     test: /vendorModules\/.+\.(jsx|js)$/,
-    loader: 'imports?jQuery=jquery,$=jquery,this=>window',
+    loader: 'imports-loader?jQuery=jquery,$=jquery,this=>window',
   },
   {
     test: /\.js$/,
-    loader: 'babel',
+    loader: 'babel-loader',
     exclude: /node_modules|bower_components|vendorModules/,
     include: path.resolve('./../'),
   },

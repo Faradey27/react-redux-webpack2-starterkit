@@ -5,8 +5,8 @@ Boilerplate for react-redux project with webpack 2 and tests
 
 # Quickstart: How to build and run Template?
 ### (a) Prerequisites
-* [Node 6.6.0 or later](https://nodejs.org/en/)
-* [Npm 3.10.3 or later](https://docs.npmjs.com/)
+* [Node 7.1.0 or later](https://nodejs.org/en/)
+* [Npm 3.10.9 or later](https://docs.npmjs.com/)
 * Unix based operation system([os x](https://en.wikipedia.org/wiki/OS_X), [ubuntu](https://en.wikipedia.org/wiki/Ubuntu_(operating_system)), [fedora](https://en.wikipedia.org/wiki/Fedora_(operating_system)), etc.)
 
 Run the following commands to verify that you have the correct versions of Node and NPM installed:
