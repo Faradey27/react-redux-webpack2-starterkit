@@ -9,6 +9,9 @@ module.exports = [
   new webpack.ProvidePlugin({
     React: 'react',
   }),
+  new webpack.ProvidePlugin({
+    jQuery: 'jquery',
+  }),
   new HtmlWebpackPlugin({
     template: './src/index.html',
     title: 'React redux boilerplate',
