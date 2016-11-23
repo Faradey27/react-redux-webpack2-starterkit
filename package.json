@@ -38,6 +38,7 @@
     "test:unit": "cross-env BABEL_ENV=test mocha --compilers js:babel-register --require ./test/testHelper.js --recursive ./test/**/*.spec.js",
     "test:coverage": "cross-env BABEL_ENV=test nyc --require babel-core/register mocha --require ./test/testHelper.js --recursive ./test/**/*.spec.js",
     "test:e2e": "node nightwatch --test",
+    "selenium:chrome": "java -jar -Dwebdriver.chrome.driver=\"node_modules/chromedriver/lib/chromedriver/chromedriver.exe\" node_modules/selenium-server/lib/runner/selenium-server-standalone-3.0.1.jar",
     "createLocaleFiles": "./bin/extract_lang.sh",
     "convertPOtoJson": "./bin/po2json.sh"
   },

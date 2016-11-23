@@ -42,8 +42,13 @@ Note: development version much more slower that production version
 # How to get unit tests coverage?
     Do steps - a,b,c
     npm run test:coverage
-# How to run e2e tests?
+# How to run e2e tests(Unix based OS)?
     Do steps - a,b,c
+    npm run test:e2e
+# How to run e2e tests(Windows)?
+    Do steps - a,b,c
+    npm run selenium - don't stop this process
+    open new tab enter next command and tests will start
     npm run test:e2e
 ### What about internalization?
 Boilerplate internalization depend on:

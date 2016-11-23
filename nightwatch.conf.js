@@ -12,13 +12,13 @@ module.exports = {
   "globals_path" : "",
 
   "selenium" : {
-    "start_process" : true,
+    "start_process" : !(/^win/.test(process.platform)),
     "server_path" : require("selenium-server").path,
     "log_path" : path.join(outputDirectory, "logs"),
     "host" : "127.0.0.1",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : require('chromedriver').path,
+      "webdriver.chrome.driver" : console.log(require('chromedriver').path) && require('chromedriver').path,
       "webdriver.chrome.logfile" : '/tmp/chromedriver.log',
       "webdriver.chrome.verboseLogging" : true,
       "webdriver.ie.driver" : ""
@@ -29,7 +29,7 @@ module.exports = {
     "default" : {
       "launch_url" : "http://localhost:3001",
       "selenium_port"  : 4444,
-      "selenium_host"  : "localhost",
+      "selenium_host"  : "127.0.0.1",
       "silent": true,
       "disable_colors": true,
       "screenshots" : {
