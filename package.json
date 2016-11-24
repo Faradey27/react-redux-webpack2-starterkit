@@ -1,6 +1,6 @@
 {
   "name": "react-redux-webpack2-starterkit",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Boilerplate for react-redux project with webpack 2 and tests",
   "main": "src/index.js",
   "keywords": [
