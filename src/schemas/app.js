@@ -1,7 +1,5 @@
-import { Schema } from 'normalizr';
+import { schema } from 'normalizr';
 
-const app = new Schema('app', {
-  idAttribute: 'id',
-});
+const app = new schema.Entity('app');
 
 export default app;

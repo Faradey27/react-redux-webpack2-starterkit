@@ -1,13 +1,11 @@
-import { Component, PropTypes } from 'react';
-import PureRender from 'pure-render-decorator';
+import { PureComponent, PropTypes } from 'react';
 import $ from 'jquery';
 
 /* eslint-disable */
 
 import styles from './Chart.less';
 
-@PureRender
-class Chart extends Component {
+class Chart extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
   }

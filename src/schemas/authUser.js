@@ -1,7 +1,5 @@
-import { Schema } from 'normalizr';
+import { schema } from 'normalizr';
 
-const user = new Schema('authUser', {
-  idAttribute: 'email',
-});
+const user = new schema.Entity('authUser');
 
 export default user;

@@ -1,7 +1,6 @@
 import { PropTypes } from 'react';
-import Input from './../Fields/Input';
-import Checkbox from './../Fields/Checkbox';
-import SelectField from './../Fields/SelectField';
+import Input from './../common/Input';
+import Checkbox from './../common/Checkbox';
 
 export const renderTextField = ({ input, label, meta: { touched, error }, ...custom }) => (
   <Input
@@ -28,24 +27,6 @@ export const renderCheckboxField = ({ input, label, ...custom }) => (
 );
 
 renderCheckboxField.propTypes = {
-  input: PropTypes.object,
-  label: PropTypes.string,
-  meta: PropTypes.object,
-};
-
-export const renderSelectField = ({ input, label, meta: { touched, error }, children, ...custom }) => (
-  <SelectField
-    errorText={touched && error}
-    floatingLabelText={label}
-    {...input}
-    children={children}
-    {...custom}
-    onChange={(event, index, value) => input.onChange(value)} // eslint-disable-line
-  />
-);
-
-renderSelectField.propTypes = {
-  children: PropTypes.node,
   input: PropTypes.object,
   label: PropTypes.string,
   meta: PropTypes.object,

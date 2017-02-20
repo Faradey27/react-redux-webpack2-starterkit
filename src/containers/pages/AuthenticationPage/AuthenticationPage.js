@@ -1,17 +1,15 @@
-import { Component, PropTypes } from 'react';
+import { PureComponent, PropTypes } from 'react';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
-import pureRender from 'pure-render-decorator';
 import urlParse from 'url-parse';
 import { replace } from 'react-router-redux';
 
 import { getAuthenticatedUser } from './../../../selectors/users';
 import userUtils from './../../../utils/userUtils';
 
-import LoginForm from './../../../components/Forms/LoginForm';
+import LoginForm from './components/LoginForm';
 
-@pureRender
-class AuthenticationPage extends Component {
+class AuthenticationPage extends PureComponent {
   static propTypes = {
     replace: PropTypes.func,
     user: PropTypes.instanceOf(Immutable.Map),

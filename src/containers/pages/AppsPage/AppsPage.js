@@ -1,7 +1,6 @@
-import { Component, PropTypes } from 'react';
+import { PureComponent, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Immutable from 'immutable';
-import pureRender from 'pure-render-decorator';
 
 import { APPS_VIEW_STATE } from './../../../constants/ViewStates';
 import { loadEntities } from './../../../actions/entity';
@@ -10,8 +9,7 @@ import { getFilteredApps } from './../../../selectors/apps';
 import Editor from './../../../components/Editor';
 import Chart from './../../../components/Charts/Chart';
 
-@pureRender
-class AppsPage extends Component {
+class AppsPage extends PureComponent {
   static propTypes = {
     apps: PropTypes.instanceOf(Immutable.List),
     loadEntities: PropTypes.func,

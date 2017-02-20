@@ -1,10 +1,7 @@
-import { Component, PropTypes } from 'react';
-import PureRender from 'pure-render-decorator';
-
+import { PureComponent, PropTypes } from 'react';
 import styles from './FontIcon.less';
 
-@PureRender
-class FontIcon extends Component {
+class FontIcon extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     color: PropTypes.string,

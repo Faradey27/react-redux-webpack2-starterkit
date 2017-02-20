@@ -1,14 +1,12 @@
-import { Component, PropTypes } from 'react';
+import { PureComponent, PropTypes } from 'react';
 import Immutable from 'immutable';
-import PureRender from 'pure-render-decorator';
 
 import Spinner from './../Spinner';
 import Message from './../Message';
 
 import styles from './ViewStateWrapper.less';
 
-@PureRender
-export default class ViewStateWrapper extends Component {
+export default class ViewStateWrapper extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,

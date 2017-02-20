@@ -4,7 +4,7 @@ import createSagaMiddleware from 'redux-saga';
 
 import { basicMiddleware, middlewaresToApply } from './commonMiddlewares';
 
-import DevTools from '../containers/DevTools';
+import DevTools from '../containers/Root/DevTools';
 import rootSaga from '../sagas/sagas';
 
 const sagaMiddleware = createSagaMiddleware();

@@ -1,6 +1,6 @@
 /* eslint-disable func-style*/
 
-import { takeEvery } from 'redux-saga';
+import { takeEvery } from 'redux-saga/effects';
 
 function *handleSomething() {
   console.info('HANDLERRR');

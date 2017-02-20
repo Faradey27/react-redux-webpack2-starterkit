@@ -1,5 +1,4 @@
-import { Component, PropTypes } from 'react';
-import pureRender from 'pure-render-decorator';
+import { PureComponent, PropTypes } from 'react';
 import Codemirror from 'react-codemirror';
 
 import 'codemirror/mode/javascript/javascript';
@@ -7,8 +6,7 @@ import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/addon/edit/closebrackets';
 import 'codemirror/lib/codemirror.css';
 
-@pureRender
-class Editor extends Component {
+class Editor extends PureComponent {
   static propTypes = {
     autoCloseBrackets: PropTypes.bool,
     gutters: PropTypes.array,

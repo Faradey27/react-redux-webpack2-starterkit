@@ -14,7 +14,15 @@ const cssmodulesScope = '?modules&importLoaders=1&localIdentName=[name]__[hash:b
 
 module.exports = {
   devtool: 'hidden-source-map',
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    vendor: [
+      'react', 'react-dom',
+      'redux', 'redux-form', 'redux-api-middleware',
+      'immutable', 'moment', 'lodash',
+      'codemirror', 'jquery', 'redux-saga',
+    ],
+  },
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
@@ -22,7 +30,6 @@ module.exports = {
   },
   plugins: [
     ...commonPlugins,
-    new webpack.optimize.DedupePlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
@@ -37,6 +44,7 @@ module.exports = {
         NODE_ENV: JSON.stringify('production'),
       },
     }),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.[hash].js' }),
   ],
   module: {
     loaders: [

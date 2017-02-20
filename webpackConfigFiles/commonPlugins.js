@@ -1,6 +1,7 @@
 /* eslint-disable import/no-commonjs*/
 /* eslint-disable import/no-nodejs-modules*/
 /* eslint-disable fp/no-mutation*/
+const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
@@ -32,5 +33,5 @@ module.exports = [
     },
   }),
   new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.NoErrorsPlugin(),
+  new webpack.NoEmitOnErrorsPlugin(),
 ];

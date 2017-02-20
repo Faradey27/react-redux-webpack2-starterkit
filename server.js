@@ -4,6 +4,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 const PORT = 3002;
+const NOT_FOUND = -1;
 
 const path = require('path');
 const webpack = require('webpack');
@@ -20,7 +21,11 @@ app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output
 app.use(webpackHotMiddleware(compiler, { noInfo: true }));
 
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, '/src/index.dev.html'));
+  if (req.url.indexOf('config/config') !== NOT_FOUND) {
+    return res.sendFile(path.join(__dirname, '/src/config/config.js'));
+  }
+
+  return res.sendFile(path.join(__dirname, '/src/index.dev.html'));
 });
 
 app.listen(PORT, (error) => {

@@ -1,5 +1,4 @@
-import { Component, PropTypes } from 'react';
-import PureRender from 'pure-render-decorator';
+import { PureComponent, PropTypes } from 'react';
 import { UNDEFINED_VALUE } from './../../constants/Constants';
 
 import styles from './Message.less';
@@ -10,8 +9,7 @@ const inlineStyles = {
   },
 };
 
-@PureRender
-export default class Message extends Component {
+export default class Message extends PureComponent {
 
   static MESSAGE_TYPES = ['info', 'ok', 'warning', 'error'];
 

@@ -3,6 +3,8 @@
 /* eslint-disable import/no-nodejs-modules */
 /* eslint-disable no-param-reassign */
 /* eslint-disable callback-return */
+/* eslint-disable fp/no-mutation */
+/* eslint-disable import/no-extraneous-dependencies */
 
 const PORT = 3001;
 

@@ -1,11 +1,9 @@
-import { Component, PropTypes } from 'react';
-import PureRender from 'pure-render-decorator';
+import { PureComponent, PropTypes } from 'react';
 import CircularProgress from 'material-ui/CircularProgress';
 
 import styles from './Spinner.less';
 
-@PureRender
-class Spinner extends Component {
+class Spinner extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     size: PropTypes.number,

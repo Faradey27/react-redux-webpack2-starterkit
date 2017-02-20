@@ -5,8 +5,8 @@ Boilerplate for react-redux project with webpack 2 and tests
 
 # Quickstart: How to build and run Template?
 ### (a) Prerequisites
-* [Node 6.6.0 or later](https://nodejs.org/en/)
-* [Npm 3.10.3 or later](https://docs.npmjs.com/)
+* [Node 7.1.0 or later](https://nodejs.org/en/)
+* [Npm 3.10.9 or later](https://docs.npmjs.com/)
 * Unix based operation system([os x](https://en.wikipedia.org/wiki/OS_X), [ubuntu](https://en.wikipedia.org/wiki/Ubuntu_(operating_system)), [fedora](https://en.wikipedia.org/wiki/Fedora_(operating_system)), etc.)
 
 Run the following commands to verify that you have the correct versions of Node and NPM installed:
@@ -18,32 +18,47 @@ Run the following commands to verify that you have the correct versions of Node 
 ### (c) Install dependencies
     cd react-redux-webpack2-starterkit
     npm install
-### (d) Build web-ui code base
-    npm run build
-after that you can find files in ```react-redux-webpack2-starterkit/dist``` - this files should be served(this is production build of ui)
+### (d) Build web-ui and run
+    npm run testserver
+after that open http://localhost:3001
+also you can find files in ```react-redux-webpack2-starterkit/dist``` - this is production build of ui files, you can serve them or upload to some hosting(like github pages)
+-----------------------------------------
+### How to change server link? or analytic id without rebuild?
+ 1) open react-redux-webpack2-starterkit/dist/config/config.js
+ 2) change what you want
+ 3) do page refresh
 
 -----------------------------------------
-### Optional steps
-### (e) Run test server with production version of web-ui
-    npm run testserver
-after running this command ```react-redux-webpack2-starterkit/dist``` files will be served on nodejs server, on http://localhost:3001
-
+### Build and run with docker
+### (a) Install docker from https://www.docker.com/
+### (b) Go to root of project and build image
+    cd react-redux-webpack2-starterkit
+    docker build -t faradey27/react-redux-webpack2-starterkit .
+### (c) Run docker image
+    docker run -p 49160:3001 -d faradey27/react-redux-webpack2-starterkit
+### (d) Run docker image    
+  Wait for 2-5 minutes and open http://0.0.0.0:49160
 -----------------------------------------
 ### Questions
 # How to run development version of ui?
-    Do steps - a,b,c
+    Do steps - a,b,c (from start of readme)
     npm start
 after running this command development version of web-ui will be availible on http://localhost:3002
 
 Note: development version much more slower that production version
 # How to run unit tests for ui?
-    Do steps - a,b,c
+    Do steps - a,b,c (from start of readme)
     npm test
 # How to get unit tests coverage?
-    Do steps - a,b,c
+    Do steps - a,b,c (from start of readme)
     npm run test:coverage
-# How to run e2e tests?
-    Do steps - a,b,c
+# How to run e2e tests(Unix based OS)?
+    Do steps - a,b,c (from start of readme)
+    npm run test:e2e
+# How to run e2e tests(Windows)?
+    Do steps - a,b,c (from start of readme)
+    npm run selenium - don't stop this process
+    open new tab enter next command and tests will start
     npm run test:e2e
 ### What about internalization?
 Boilerplate internalization depend on:

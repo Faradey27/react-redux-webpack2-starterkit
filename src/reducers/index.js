@@ -7,7 +7,7 @@ import { reducer as formReducer } from 'redux-form/immutable';
 
 import routing from './routing';
 import view from './view';
-import dataView from './dataView';
+import dataLayout from './dataLayout';
 import analytic from './../utils/analytic';
 
 import * as entityReducers from './entityReducers';
@@ -46,6 +46,6 @@ export default combineReducers({
   entities,
   routing,
   view,
-  dataView,
+  dataLayout,
   form: formReducer,
 });
