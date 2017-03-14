@@ -79,7 +79,7 @@
     "react-router-redux": "4.0.8",
     "react-style-proptype": "^2.0.0",
     "react-tap-event-plugin": "2.0.1",
-    "react-toolbox": "^2.0.0-beta.6",
+    "react-toolbox": "^2.0.0-beta.7",
     "react-toolbox-themr": "^1.0.2",
     "react-virtualized": "9.0.0",
     "redux": "3.6.0",
