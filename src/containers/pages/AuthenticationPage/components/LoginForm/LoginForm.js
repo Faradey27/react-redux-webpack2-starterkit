@@ -12,7 +12,7 @@ import { loginValidation } from './../../../../../utils/forms/validation';
 import { getViewState } from './../../../../../selectors/view';
 import { LOGIN_VIEW_STATE } from './../../../../../constants/ViewStates';
 
-import styles from './LoginForm.less';
+import styles from './LoginForm.css';
 
 class LoginForm extends PureComponent {
   static propTypes = {

@@ -17,13 +17,6 @@
     - [ID Selectors](#id-selectors)
     - [JavaScript hooks](#javascript-hooks)
     - [Border](#border)
-  1. [Less](#less)
-    - [Syntax](#syntax)
-    - [Ordering](#ordering-of-property-declarations)
-    - [Variables](#variables)
-    - [Mixins](#mixins)
-    - [Extend directive](#extend-directive)
-    - [Nested selectors](#nested-selectors)
   1. [Translation](#translation)
 
 ## Terminology

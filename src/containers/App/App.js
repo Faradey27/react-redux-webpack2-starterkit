@@ -1,6 +1,6 @@
 import { PropTypes, PureComponent } from 'react';
 import HeaderBar from './components/HeaderBar';
-import styles from './App.less';
+import styles from './App.css';
 
 class App extends PureComponent {
   static propTypes = {

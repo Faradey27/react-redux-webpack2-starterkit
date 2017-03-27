@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 /* eslint-disable */
 
-import styles from './Chart.less';
+import styles from './Chart.css';
 
 class Chart extends PureComponent {
   static propTypes = {

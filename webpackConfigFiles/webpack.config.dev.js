@@ -28,7 +28,7 @@ module.exports = {
     new StyleLintPlugin({
       configFile: '.stylelintrc',
       context: './src/',
-      files: '**/*.?(less|css)',
+      files: '**/*.css',
       failOnError: false,
     }),
     new webpack.DefinePlugin({
@@ -43,10 +43,6 @@ module.exports = {
       ...commonLoaders,
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader',
-      },
-      {
-        test: /\.less$/,
         use: [
           {
             loader: 'style-loader',
@@ -61,9 +57,6 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
-          },
-          {
-            loader: 'less-loader',
           },
         ],
       },

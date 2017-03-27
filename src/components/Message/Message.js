@@ -1,7 +1,7 @@
 import { PureComponent, PropTypes } from 'react';
 import { UNDEFINED_VALUE } from './../../constants/Constants';
 
-import styles from './Message.less';
+import styles from './Message.css';
 
 const inlineStyles = {
   error: {

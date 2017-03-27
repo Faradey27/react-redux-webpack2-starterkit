@@ -16,10 +16,10 @@ import Root from './containers/Root';
 import configureStore from './store/configureStore';
 import localStorageUtils from './utils/localStorageUtils';
 
-import './assets/normalize.less';
-import './assets/media.less';
-import './assets/typography.less';
-import './styles.less';
+import './assets/normalize.css';
+// import './assets/media.less';
+import './assets/typography.css';
+import './styles.css';
 
 const authUser = localStorageUtils.getAuthinticatedUser();
 

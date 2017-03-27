@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import logo from './img/logo.png';
 
-import styles from './Logo.less';
+import styles from './Logo.css';
 
 class Logo extends PureComponent {
   static contextTypes = {

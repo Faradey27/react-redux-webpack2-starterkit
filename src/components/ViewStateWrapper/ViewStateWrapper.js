@@ -4,7 +4,7 @@ import Immutable from 'immutable';
 import Spinner from './../Spinner';
 import Message from './../Message';
 
-import styles from './ViewStateWrapper.less';
+import styles from './ViewStateWrapper.css';
 
 export default class ViewStateWrapper extends PureComponent {
   static propTypes = {

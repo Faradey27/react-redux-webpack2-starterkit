@@ -53,14 +53,7 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
           fallbackLoader: 'style-loader',
-          loader: 'css-loader',
-        }),
-      },
-      {
-        test: /\.less$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: `css-loader${cssmodulesScope}!postcss-loader!less-loader`,
+          loader: `css-loader${cssmodulesScope}!postcss-loader`,
         }),
       },
     ],

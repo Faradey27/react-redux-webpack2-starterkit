@@ -71,7 +71,7 @@ const styles = {
 
 #### 1) Styles
 
-Import styles from separate less file with css-modules
+Import styles from separate css file with css-modules
 
 #### 2) PropTypes
 All props must be defined in static propTypes.
@@ -222,4 +222,3 @@ describe('SmartComponent', () => {
 
  1. Test the unconnected component.
  2. Stub actions with sinon.spy().
- 

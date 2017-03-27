@@ -16,7 +16,7 @@
   outline: none;
   border: none;
   background: transparent;
-  margin-top: 3px; // we have not centered image, so we require to move it down
+  margin-top: 3px;
 }
 
 .inner {

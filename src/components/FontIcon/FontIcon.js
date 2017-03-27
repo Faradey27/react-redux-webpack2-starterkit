@@ -1,5 +1,5 @@
 import { PureComponent, PropTypes } from 'react';
-import styles from './FontIcon.less';
+import styles from './FontIcon.css';
 
 class FontIcon extends PureComponent {
   static propTypes = {

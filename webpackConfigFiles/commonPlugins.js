@@ -4,6 +4,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const postcssConstants = require('postcss-constants');
 
 module.exports = [
   new webpack.ProvidePlugin({
@@ -19,9 +20,16 @@ module.exports = [
     inject: 'body',
   }),
   new webpack.LoaderOptionsPlugin({
-    test: /\.less$/,
+    test: /\.css/,
     options: {
       postcss: [
+        postcssConstants({
+          defaults: {
+            colors: {
+              primary: 'blue',
+            },
+          },
+        }),
         autoprefixer({
           browsers: [
             'last 3 version',

@@ -2,7 +2,7 @@ import { PureComponent } from 'react';
 import AppBar from './../../../../components/common/AppBar';
 
 import Logo from './components/Logo';
-import styles from './HeaderBar.less';
+import styles from './HeaderBar.css';
 
 class HeaderBar extends PureComponent {
   render() {
