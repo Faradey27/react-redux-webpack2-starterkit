@@ -43,6 +43,7 @@ module.exports = {
       ...commonLoaders,
       {
         test: /\.css$/,
+        exclude: /node_modules|bower_components|vendorModules/,
         use: [
           {
             loader: 'style-loader',
@@ -57,6 +58,18 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules|bower_components|vendorModules/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
           },
         ],
       },

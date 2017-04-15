@@ -1,0 +1,10 @@
+.widget {
+  width: 600px;
+  height: 400px;
+  margin: 20px;
+  background-color: rgb(43, 43, 43);
+  box-shadow: rgba(0, 0, 0, 0.156863) 0 3px 10px, rgba(0, 0, 0, 0.227451) 0 3px 10px;
+  border-radius: 2px;
+  text-align: center;
+  display: inline-block;
+}

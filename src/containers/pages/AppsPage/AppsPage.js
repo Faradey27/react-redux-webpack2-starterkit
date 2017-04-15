@@ -6,6 +6,7 @@ import { APPS_VIEW_STATE } from './../../../constants/ViewStates';
 import { loadEntities } from './../../../actions/entity';
 import { getFilteredApps } from './../../../selectors/apps';
 
+import Widget from './../../../components/Widget';
 import Editor from './../../../components/Editor';
 import Chart from './../../../components/Charts/Chart';
 
@@ -19,7 +20,7 @@ class AppsPage extends PureComponent {
     i18n: PropTypes.object,
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.loadEntities({ href: '/apps', type: APPS_VIEW_STATE });
   }
 
@@ -34,8 +35,12 @@ class AppsPage extends PureComponent {
       <div>
         {l('Apps page')}
         {this.renderApps()}
-        <Chart />
-        <Editor />
+        <Widget>
+          <Chart />
+        </Widget>
+        <Widget>
+          <Editor />
+        </Widget>
       </div>
     );
   }

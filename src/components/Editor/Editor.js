@@ -6,6 +6,8 @@ import 'codemirror/addon/edit/matchbrackets';
 import 'codemirror/addon/edit/closebrackets';
 import 'codemirror/lib/codemirror.css';
 
+import styles from './Editor.css';
+
 class Editor extends PureComponent {
   static propTypes = {
     autoCloseBrackets: PropTypes.bool,
@@ -39,20 +41,22 @@ class Editor extends PureComponent {
 
   render() {
     return (
-      <Codemirror
-        options={{
-          mode: this.props.mode,
-          gutters: this.props.gutters,
-          matchBrackets: this.props.matchBrackets,
-          autoCloseBrackets: this.props.autoCloseBrackets,
-          lineNumbers: this.props.lineNumbers,
-          lint: this.props.lint,
-          viewportMargin: Infinity,
-        }}
-        ref={this.setEditorInstance}
-        value={this.props.value}
-        onChange={this.handleChange}
-      />
+      <div className={styles.editor}>
+        <Codemirror
+          options={{
+            mode: this.props.mode,
+            gutters: this.props.gutters,
+            matchBrackets: this.props.matchBrackets,
+            autoCloseBrackets: this.props.autoCloseBrackets,
+            lineNumbers: this.props.lineNumbers,
+            lint: this.props.lint,
+            viewportMargin: Infinity,
+          }}
+          ref={this.setEditorInstance}
+          value={this.props.value}
+          onChange={this.handleChange}
+        />
+      </div>
     );
   }
 }
